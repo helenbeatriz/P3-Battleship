@@ -15,7 +15,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('battleship_names')
 from random import randint
-
+ 
+#  Welcome message and rules
 os.system('clear')
 print("Battleships!")
 print("Our board consists of 8 rows and 8 columns.")
@@ -93,8 +94,8 @@ if __name__ == "__main__":
             GUESS_BOARD[row][column] = "-"   
             turns -= 1     
         if count_hit_ships(GUESS_BOARD) == 5:
-            print("You win!")
+            print("You won!")
             break
         print("You have " + str(turns) + " turns left")
         if turns == 0:
-            print("You ran out of turns")
+            print("You lost :( !! ")
