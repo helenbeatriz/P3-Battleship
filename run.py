@@ -16,13 +16,17 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('battleship_names')
  
 #  Welcome message and rules
-os.system('clear')
-print("Welcome to Battleships!")
-print("Our board consists of 8 rows and 8 columns.")
-print("Your goal is to find where the ships are")
-print("After every input you type a row and a column letter into the game, press enter to continue.")
-print("Whenever you get it right an 'X' will be displayed")
-print("Whenever you get it wrong an '-' will be displayed")
+def welcome(): 
+    os.system('clear')
+    print("Welcome to Battleships!")
+    print("Our board consists of 8 rows and 8 columns.")
+    print("Your goal is to find where the ships are")
+    print("After every input you type a row and a column letter into the game, press enter to continue.")
+    print("Whenever you get it right an 'X' will be displayed")
+    print("Whenever you get it wrong an '-' will be displayed") 
+
+
+welcome()
 
 #Board for holding ship locations
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
