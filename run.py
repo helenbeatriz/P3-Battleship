@@ -26,12 +26,11 @@ def welcome():
     print("Whenever you get it wrong an '-' will be displayed") 
 
 
-welcome()
-
 #Board for holding ship locations
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 # Board for displaying hits and misses
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
+
 
 def print_board(board):
     print("  A B C D E F G H")
@@ -79,7 +78,8 @@ def count_hit_ships(board):
                 count += 1
     return count
 
-if __name__ == "__main__":
+
+def game():
     create_ships(HIDDEN_BOARD)
     turns = 10
     while turns > 0:
@@ -102,3 +102,8 @@ if __name__ == "__main__":
         print("You have " + str(turns) + " turns left")
         if turns == 0:
             print("You lost :( !! ")
+
+# Calling function for the game
+if __name__ == "__main__":
+    welcome()
+    game()
