@@ -17,7 +17,7 @@ SHEET = GSPREAD_CLIENT.open('battleship_names')
  
 #  Welcome message and rules
 os.system('clear')
-print("Battleships!")
+print("Welcome to Battleships!")
 print("Our board consists of 8 rows and 8 columns.")
 print("Your goal is to find where the ships are")
 print("After every input you type a row and a column letter into the game, press enter to continue.")
