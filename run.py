@@ -1,10 +1,28 @@
+import gspread
+from google.oauth2.service_account import Credentials
+from random import randint
+import os
+import sys
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('battleship_names')
 from random import randint
 
-
-"""
-Welcome player
-"""
-name = input("Enter your name here:\n")
+os.system('clear')
+print("Battleships!")
+print("Our board consists of 8 rows and 8 columns.")
+print("Your goal is to find where the ships are")
+print("After every input you type a row and a column letter into the game, press enter to continue.")
+print("Whenever you get it right an 'X' will be displayed")
+print("Whenever you get it wrong an '-' will be displayed")
 
 #Board for holding ship locations
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
@@ -29,8 +47,7 @@ letters_to_numbers = {
     'G': 6,
     'H': 7
 }
-
-#computer is going to create 5 ships
+#computer create 5 ships
 def create_ships(board):
     for ship in range(5):
         ship_row, ship_column = randint(0,7), randint(0,7)
@@ -41,15 +58,15 @@ def create_ships(board):
 def get_ship_location():
     row = input("Enter the row of the ship: ").upper()
     while row not in "12345678":
-        print('ERROR ! Select a valid row ')
+        print('Not an appropriate choice, please select a valid row')
         row = input("Enter the row of the ship: ").upper()
     column = input("Enter the column of the ship: ").upper()
     while column not in "ABCDEFGH":
-        print('ERROR ! Select a valid column ')
+        print('Not an appropriate choice, please select a valid column')
         column = input("Enter the column of the ship: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
-# variable to check if all the ships available are hit
+#check if all ships are hit
 def count_hit_ships(board):
     count = 0
     for row in board:
@@ -66,7 +83,7 @@ if __name__ == "__main__":
         print_board(GUESS_BOARD)
         row, column = get_ship_location()
         if GUESS_BOARD[row][column] == "-":
-            print("You inserted that one already.")
+            print("You guessed that one already.")
         elif HIDDEN_BOARD[row][column] == "X":
             print("Hit")
             GUESS_BOARD[row][column] = "X" 
@@ -81,6 +98,3 @@ if __name__ == "__main__":
         print("You have " + str(turns) + " turns left")
         if turns == 0:
             print("You ran out of turns")
- 
-
-            # criar hj a commit  # variable to check if all the ships available are hit
