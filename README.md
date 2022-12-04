@@ -129,7 +129,7 @@ A warning ocurred due to the Ship ASCII art images but apart from that it passes
 - I coudnt get my game working because my Gitpod wasnt updated so replying on stack and used git commands and resolved the bug.
 - I was getting an Error and not able to open the game because of variables that were not being called. 
 - I had few errors related to data that was not being inserted properly and generating an error. 
-
+- When user was inserting an empty command like just "enter" an error was being shown so I added ' or row in "" ' to the code to fix that.
 ## Deployment
 
 This game was deployed through Heroku. The live link is [here](https://battleshipprojct3.herokuapp.com/)

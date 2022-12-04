@@ -93,7 +93,7 @@ def get_ship_location():
         print('Not an appropriate choice, please select a valid row')
         row = input("Enter the row of the ship: ").upper()
     column = input("Enter the column of the ship: ").upper()
-    while column not in "ABCDEFGH"or row in "":
+    while column not in "ABCDEFGH" or column in "":
         print('Not an appropriate choice, please select a valid column')
         column = input("Enter the column of the ship: ").upper()
     
