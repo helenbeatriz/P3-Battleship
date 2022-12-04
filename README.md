@@ -32,10 +32,8 @@ Initially, I wanted to create a interactive game with other user scores, names b
       
 -   __Welcome Screen__
 
-    - A  ASCII art images of a shit is displayed for the user 
+    - A  ASCII art images of a ship is displayed for the user 
     - Then user can see the rules section display and have access to the board of the game
-
-      ![Navbar]()
 
 -   __Rules__
 
@@ -108,7 +106,13 @@ Initially, I wanted to create a interactive game with other user scores, names b
    - Mozilla FIrefox - Version 99.0.1 (64-bit)
    - Safari - Version 13.1.3 (15609.4.1)
 
-- Everything was working accordingly.    
+- Everything was working accordingly.
+
+### CI Python Linter
+
+A warning ocurred due to the Ship ASCII art images but apart from it it passes the code verification. 
+![Navbar](/media/codeinstitutepythonlinter.png)
+
 
 ### User Testing
 
