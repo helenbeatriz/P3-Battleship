@@ -3,6 +3,9 @@
 [View the live project here](https://battleshipprojct3.herokuapp.com/)
 
 <h2> How to Play </h2>
+
+![Game](/media/gif.gif)
+
     Our board consists of 8 rows and 8 columns.
     The user goal is to find where the ships are.
     After every input you type a row and a column letter into the game, then user has to press enter to continue.
@@ -22,7 +25,6 @@
 
 I wanted to create a functional, simple battleships game, which is fully responsive and interactive. 
 I was planning to display on the board each one of the user guesses which I did.
-
 Initially, I wanted to create a interactive game with other user scores, names but due to the lack of time it became out of my scope. 
    
 
@@ -48,9 +50,12 @@ Initially, I wanted to create a interactive game with other user scores, names b
     - User is required to select a row number (1-8) and a column (A-H). 
     - If user inserts an invalid command, an error message will be displayed.
     - If successful, a green 'X' and a message 'Hit' will be displayed. 
+
+      ![Hit](/media/hit.png)
+
     - If unsuccessful, the user will see that message 'MISS!' and a '-' displayed. 
 
-      ![Navbar]()
+      ![Miss](/media/miss.png)
       
 ## Flow Chart
  The flow of the game was structured to work in responsiveness to user input using features such as if-elif-else statements, while loops and for loops. This also enable the user input validation checks to be visually clear before the code was written.
@@ -63,7 +68,7 @@ Initially, I wanted to create a interactive game with other user scores, names b
 - A leaderboard
 - Using Google Cloud APIs, I could store the user's name into a database.
 - A 'play again' button
-   - With additional time, I would have done way more. 
+- With additional time, I would have done way more. 
 
 ## Technologies and Support
 
@@ -103,13 +108,12 @@ Initially, I wanted to create a interactive game with other user scores, names b
    
    - Google Chrome - Version 100.0.4896.60 (Official Build) (64-bit)
    - Microsoft Edge - Version 100.0.1185.50 (Official build) (64-bit)
-   - Mozilla FIrefox - Version 99.0.1 (64-bit)
+   - Mozilla Firefox - Version 99.0.1 (64-bit)
    - Safari - Version 13.1.3 (15609.4.1)
-
-- Everything was working accordingly.
 
 ### CI Python Linter
 
+I checked the app using Python validator provided by Code Institute. 
 A warning ocurred due to the Ship ASCII art images but apart from it it passes the code verification. 
 ![Navbar](/media/codeinstitutepythonlinter.png)
 
@@ -117,16 +121,35 @@ A warning ocurred due to the Ship ASCII art images but apart from it it passes t
 ### User Testing
 
 - User was able to play the game and the game is responsive based on the user inputs. 
+- Users was able to see the correct markers for 'hits' and 'misses', and were able to read visual prompts that was shown '-' and 'X'. 
+- When the max amount of hits was reached, users experienced the 'end message' either congratulating or commiserating. 
+
 ### Resolved Bugs
 
 - I coudnt get my game working because my Gitpod wasnt updated so replying on stack and used git commands and resolved the bug.
 - I was getting an Error and not able to open the game because of variables that were not being called. 
+- I had few errors related to data that was not being inserted properly and generating an error. 
+
 ## Deployment
 
 This game was deployed through Heroku. The live link is [here](https://battleshipprojct3.herokuapp.com/)
+
+## This is how you can deploy this project:
 
 - Fork/clone this repository
 - Create a new app on Heroku
 - Ensure that the buildpacks are set to 'Python' and 'NodeJS' (the Code Institute template provides code for the terminal to display the game)
 - Link the app on Heroku to the repository
-- Click on the 'Deploy' button.
+- Go to Application Management.
+- Generating and Downloading SSH Keys.
+- Upload the SSH Public Key to Your Git Repository.
+For Github.
+- Copy the Repository SSH Address.
+- Deploy Code from Your Repository.
+
+### Credits and Acknowledgements
+
+- Credit to various inspiration from code found in various posts on Code Institute groups on slack.
+- Daisy my mentor. 
+- I would like to thank Harry Dhillon that is not my mentor but has always been there helping and supporting me whenver I needed. 
+ 
