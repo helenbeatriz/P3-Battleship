@@ -150,6 +150,6 @@ For Github.
 ### Credits and Acknowledgements
 
 - Credit to various inspiration from code found in various posts on Code Institute groups on slack.
-- Daisy my mentor. 
-- I would like to thank Harry Dhillon that is not my mentor but has always been there helping and supporting me whenver I needed. 
+- Thanks to Daisy my mentor. 
+- I would like to thank Harry Dhillon that is not my mentor but has always been there helping and supporting me whenever I needed. 
  
