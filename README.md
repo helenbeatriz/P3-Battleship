@@ -24,8 +24,8 @@
 ## Scope
 
 I wanted to create a functional, simple battleships game, which is fully responsive and interactive. 
-I was planning to display on the board each one of the user guesses which I did.
-Initially, I wanted to create a interactive game with other user scores, names but due to the lack of time it became out of my scope. 
+I was planning to display each user guess on the board which I did.
+Initially, I wanted to create an interactive game with other user's scores and names but due to the lack of time it was removed from scope. 
    
 
 ## Features
@@ -34,31 +34,31 @@ Initially, I wanted to create a interactive game with other user scores, names b
       
 -   __Welcome Screen__
 
-    - A  ASCII art images of a ship is displayed for the user 
-    - Then user can see the rules section display and have access to the board of the game
+    - An ASCII art image of a ship is displayed for the user.
+    - Then, the user can see the rules section display and have access to the board of the game.
 
 -   __Rules__
 
-    - The rules of the game are display and provided step by step for the user to know how it needs to be played. 
+    - The rules of the game are displayed and provided step by step for the user to know how the game is played. 
 
       ![Navbar](/media/rules.png)
       
 -   __What To Expect From The Game__
 
     - Once user starts the game, a board is displayed.
-    - The board displayed only contains '|' that sinalize the spaces that the user did not insert to play. 
+    - The board display only contains '|' which identifies the spaces that the user did not insert to play. 
     - User is required to select a row number (1-8) and a column (A-H). 
     - If user inserts an invalid command, an error message will be displayed.
     - If successful, a green 'X' and a message 'Hit' will be displayed. 
 
       ![Hit](/media/hit.png)
 
-    - If unsuccessful, the user will see that message 'MISS!' and a '-' displayed. 
+    - If unsuccessful, the user will see the message 'MISS!' and a '-' displayed. 
 
       ![Miss](/media/miss.png)
       
 ## Flow Chart
- The flow of the game was structured to work in responsiveness to user input using features such as if-elif-else statements, while loops and for loops. This also enable the user input validation checks to be visually clear before the code was written.
+ The flow of the game was structured to work in responsiveness to user input using features such as if-elif-else statements, while loops and for loops. This also enables the user input validation checks to be visually clear before the code was written.
       ![Navbar](/media/diagram.png)
 
    ### Potential Future Features
@@ -114,14 +114,14 @@ Initially, I wanted to create a interactive game with other user scores, names b
 ### CI Python Linter
 
 I checked the app using Python validator provided by Code Institute. 
-A warning ocurred due to the Ship ASCII art images but apart from it it passes the code verification. 
+A warning ocurred due to the Ship ASCII art images but apart from that it passes the code verification. 
 ![Navbar](/media/codeinstitutepythonlinter.png)
 
 
 ### User Testing
 
 - User was able to play the game and the game is responsive based on the user inputs. 
-- Users was able to see the correct markers for 'hits' and 'misses', and were able to read visual prompts that was shown '-' and 'X'. 
+- Users was able to see the correct markers for 'hits' and 'misses', and was able to read visual prompts that were shown '-' and 'X'. 
 - When the max amount of hits was reached, users experienced the 'end message' either congratulating or commiserating. 
 
 ### Resolved Bugs
